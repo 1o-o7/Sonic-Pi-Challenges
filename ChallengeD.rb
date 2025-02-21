@@ -94,8 +94,8 @@ end
     stop
   end
   
-  #second layer
-  live_loop :layer_2 do
+  #new layer
+  live_loop :layer_new do
     16.times do
       sample :drum_tom_hi_soft, amp: 0.8
       sleep 1
