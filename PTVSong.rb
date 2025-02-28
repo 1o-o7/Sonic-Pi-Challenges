@@ -213,16 +213,62 @@ end
 sleep 24
 
 use_synth :dpulse
-
-play :Ab4
-sleep 0.75
-play :G4
-sleep 0.75
-play :F4
-sleep 1
-play :G4
-sleep 0.5
-play :F4
-sleep 0.5
-play :Eb3
-sleep 0.5
+with_fx :ping_pong do
+  play :Ab4
+  sleep 0.75
+  play :G4
+  sleep 0.75
+  play :F4
+  sleep 1
+  play :G4
+  sleep 0.5
+  play :F4
+  sleep 0.5
+  play :Eb4
+  sleep 0.5
+  
+  play :F4
+  sleep 0.5
+  play :G4
+  sleep 0.5
+  play :Ab4
+  sleep 0.5
+  play :G4
+  sleep 1
+  play :Bb3
+  sleep 0.5
+  play :Eb4
+  sleep 0.5
+  play :F4
+  sleep 0.5
+  
+  play :F4
+  sleep 0.5
+  play :G4
+  sleep 0.5
+  play :F4
+  sleep 0.5
+  play :F4
+  sleep 1
+  play :Eb4
+  sleep 0.5
+  play :Eb4
+  sleep 0.5
+  play :Bb4
+  sleep 0.5
+  
+  play :Bb4
+  sleep 0.5
+  play :Ab4
+  sleep 0.5
+  play :G4
+  sleep 0.5
+  play :F4
+  sleep 1
+  play :Eb4
+  sleep 0.5
+  play :Eb4
+  sleep 0.5
+  play :F4
+  sleep 0.5
+end
