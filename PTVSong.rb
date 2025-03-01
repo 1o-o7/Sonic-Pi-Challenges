@@ -37,7 +37,8 @@ end
 
 drums_sample = "C:/Users/jocelyn_vazquez/Downloads/HOTM- Drums.mp3"
 bass_sample = "C:/Users/jocelyn_vazquez/Downloads/bass.mp3"
-
+extra_sample ="C:/Users/jocelyn_vazquez/Downloads/extra-sound.mp3"
+drums_2_sample ="C:/Users/jocelyn_vazquez/Downloads/drums2.mp3"
 
 
 live_loop :hold do
@@ -204,7 +205,7 @@ sleep 12
 
 live_loop :bass do
   1.times do
-    sample bass_sample, amp: 3
+    sample bass_sample, amp: 2.5
     sleep 32
   end
   stop
@@ -212,63 +213,154 @@ end
 
 sleep 24
 
+live_loop :extra do
+  1.times do
+    sample extra_sample, amp: 1.5
+    sleep 32
+  end
+  stop
+end
+
 use_synth :dpulse
-with_fx :ping_pong do
-  play :Ab4
-  sleep 0.75
-  play :G4
-  sleep 0.75
-  play :F4
-  sleep 1
-  play :G4
-  sleep 0.5
-  play :F4
-  sleep 0.5
-  play :Eb4
-  sleep 0.5
-  
-  play :F4
-  sleep 0.5
-  play :G4
-  sleep 0.5
-  play :Ab4
-  sleep 0.5
-  play :G4
-  sleep 1
-  play :Bb3
-  sleep 0.5
-  play :Eb4
-  sleep 0.5
-  play :F4
-  sleep 0.5
-  
-  play :F4
-  sleep 0.5
-  play :G4
-  sleep 0.5
-  play :F4
-  sleep 0.5
-  play :F4
-  sleep 1
-  play :Eb4
-  sleep 0.5
-  play :Eb4
-  sleep 0.5
-  play :Bb4
-  sleep 0.5
-  
-  play :Bb4
-  sleep 0.5
-  play :Ab4
-  sleep 0.5
-  play :G4
-  sleep 0.5
-  play :F4
-  sleep 1
-  play :Eb4
-  sleep 0.5
-  play :Eb4
-  sleep 0.5
-  play :F4
-  sleep 0.5
+live_loop :main do
+  1.times do
+    with_fx :ping_pong do
+      play :Ab4
+      sleep 0.75
+      play :G4
+      sleep 0.75
+      play :F4
+      sleep 1
+      play :G4
+      sleep 0.5
+      play :F4
+      sleep 0.5
+      play :Eb4
+      sleep 0.5
+      
+      play :F4
+      sleep 0.5
+      play :G4
+      sleep 0.5
+      play :Ab4
+      sleep 0.5
+      play :G4
+      sleep 1
+      play :Bb3
+      sleep 0.5
+      play :Eb4
+      sleep 0.5
+      play :F4
+      sleep 0.5
+      
+      play :F4
+      sleep 0.5
+      play :G4
+      sleep 0.5
+      play :F4
+      sleep 0.5
+      play :F4
+      sleep 1
+      play :Eb4
+      sleep 0.5
+      play :Eb4
+      sleep 0.5
+      play :Bb4
+      sleep 0.5
+      
+      play :Bb4
+      sleep 0.5
+      play :Ab4
+      sleep 0.5
+      play :G4
+      sleep 0.5
+      play :F4
+      sleep 1
+      play :Eb4
+      sleep 0.5
+      play :Eb4
+      sleep 0.5
+      play :F4
+      sleep 0.5
+      
+      play :G4
+      sleep 0.5
+      play :G4
+      sleep 0.75
+      play :G4
+      sleep 0.75
+      play :G4
+      sleep 0.25
+      play :F4
+      sleep 0.25
+      play :Eb4
+      sleep 0.25
+      play :F4
+      sleep 0.25
+      play :G4
+      sleep 0.25
+      play :F4
+      sleep 0.25
+      play :Eb4
+      sleep 0.25
+      
+      play :F4
+      sleep 0.5
+      play :Eb4
+      sleep 0.5
+      play :G4, sustain: 1
+      sleep 1.5
+      play :Eb4
+      sleep 0.5
+      play :Eb4
+      sleep 0.5
+      play :Bb4
+      sleep 0.5
+      
+      play :Bb4
+      sleep 0.5
+      play :Ab4
+      sleep 0.5
+      play :G4
+      sleep 0.5
+      play :F4
+      sleep 1
+      play :G4
+      sleep 0.5
+      play :F4
+      sleep 0.5
+      play :Eb4
+      sleep 0.5
+      
+      play :F4
+      sleep 0.5
+      play :F4
+      sleep 0.5
+      play :Eb4
+      sleep 0.5
+      play :F4
+      sleep 0.5
+      play :Eb4
+      sleep 1
+      play :Bb4
+      sleep 1
+      
+      play :Bb4, sustain: 1.5
+      play :Eb4, sustain: 1.5
+      sleep 2
+    end
+    stop
+  end
+end
+
+
+sleep 16
+
+
+live_loop :drums_2 do
+  1.times do
+    sample drums_2_sample, amp: 1.5
+    sleep 16
+  end
+  stop
 end
