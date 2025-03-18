@@ -1,27 +1,31 @@
 use_bpm 73
 
-define :pierce do
-  sleep 0.25
-  play :G3
-  sleep 0.25
-  play :Ab3
-  sleep 0.25
-  play :Eb4
-  sleep 0.25
-  play :Bb3, sustain: 3
-  sleep 3
+define :pierce do |insertFX|
+  with_fx insertFX do
+    sleep 0.25
+    play :G3
+    sleep 0.25
+    play :Ab3
+    sleep 0.25
+    play :Eb4
+    sleep 0.25
+    play :Bb3, sustain: 3
+    sleep 3
+  end
 end
 
-define :veil do
-  sleep 0.25
-  play :F3
-  sleep 0.25
-  play :G3
-  sleep 0.25
-  play :Eb4
-  sleep 0.25
-  play :Bb3, sustain: 3
-  sleep 3
+define :veil do |addFX|
+  with_fx addFX do
+    sleep 0.25
+    play :F3
+    sleep 0.25
+    play :G3
+    sleep 0.25
+    play :Eb4
+    sleep 0.25
+    play :Bb3, sustain: 3
+    sleep 3
+  end
 end
 
 define :para do |sound1, sound2, sound3, sound4, sound5, sound6, sound7|
@@ -63,19 +67,11 @@ sleepList = [0.25, 0.25, 0.25, 0.5, 0.5, 0.25, 0.25, 0.25,]
 live_loop :hold do
   use_synth :dpulse
   
-  with_fx :ping_pong do
-    pierce
-  end
-  with_fx :krush do
-    pierce
-  end
+  pierce :ping_pong
+  pierce :krush
   
-  with_fx :ping_pong do
-    veil
-  end
-  with_fx :krush do
-    veil
-  end
+  veil :ping_pong
+  veil :krush
   
   sample :elec_lo_snare
   sleep 1
