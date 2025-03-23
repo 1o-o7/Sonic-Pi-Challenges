@@ -310,9 +310,7 @@ live_loop :main do
       play :Bb4
       sleep 1
       
-      play :Bb4, sustain: 1.5, amp: 0.5
-      play :Eb4, sustain: 1.5, amp: 0.5
-      play :F4, sustain: 1.5, amp: 0.5
+      play :Bb4, sustain: 1, amp: 0.5
       
       sleep 2
     end
