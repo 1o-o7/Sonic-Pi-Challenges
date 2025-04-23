@@ -303,9 +303,11 @@ live_loop :three do
     
     #measure 15
     with_fx :echo do
+      with_fx :slicer do
       play :G5, amp: 0.5
       sleep 3.5
       play :F3, amp: 0.4
+      end
     end
   end
   stop
