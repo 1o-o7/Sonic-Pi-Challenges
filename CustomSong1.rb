@@ -1,4 +1,12 @@
+# Youtube links: https://youtu.be/nNTkjkhgKpI?si=9iHUJXm2bzO8CayL (music sheet)   https://youtu.be/nFoBBVmsgcc?si=ETlWLHw0-VMpYYYj
+
 use_bpm 73
+
+drums_sample = "C:/Users/jocelyn_vazquez/Downloads/HOTM- Drums.mp3"
+bass_sample = "C:/Users/jocelyn_vazquez/Downloads/bass.mp3"
+extra_sample = "C:/Users/jocelyn_vazquez/Downloads/extraa_sample.mp3"
+drums_2_sample = "C:/Users/jocelyn_vazquez/Downloads/drums2.mp3"
+outro_sample = "C:/Users/jocelyn_vazquez/Downloads/songTwo_extra.mp3"
 
 define :pierce do |insertFX|
   with_fx insertFX do
@@ -55,11 +63,6 @@ define :repeat do
   play :F4, amp: 1.5
   sleep 0.5
 end
-
-drums_sample = "C:/Users/jocelyn_vazquez/Downloads/HOTM- Drums.mp3"
-bass_sample = "C:/Users/jocelyn_vazquez/Downloads/bass.mp3"
-extra_sample = "C:/Users/jocelyn_vazquez/Downloads/extra-sound.mp3"
-drums_2_sample = "C:/Users/jocelyn_vazquez/Downloads/drums2.mp3"
 
 notesList = [:G2, :Ab2, :Eb3, :Bb2, :Ab2, :G2, :Ab2,:Eb3, ]
 sleepList = [0.25, 0.25, 0.25, 0.5, 0.5, 0.25, 0.25, 0.25,]
@@ -230,9 +233,15 @@ end
 sleep 24
 
 live_loop :extra do
-  1.times do
-    sample extra_sample, amp: 1.5
-    sleep 32
+  x = 0
+  y = 0.25
+  z = 2
+  4.times do
+    sample extra_sample, start: x, finish: y, amp: z
+    sleep 23.59043/4
+    x = x + 0.25
+    y = y + 0.25
+    z = z - 0.5
   end
   stop
 end
@@ -310,9 +319,8 @@ live_loop :main do
       play :Bb4
       sleep 1
       
-      play :Bb4, sustain: 1, amp: 0.5
-      
-      sleep 2
+      play :Bb5, sustain: 1, amp: 0.5
+      sleep 1
     end
     stop
   end
@@ -327,3 +335,18 @@ live_loop :drums_2 do
   end
   stop
 end
+
+live_loop :out do
+  x = 0
+  y = 0.25
+  z = 1
+  4.times do
+    sample outro_sample, start: x, finish: y, amp: z
+    sleep 19.4012/4
+    x = x + 0.25
+    y = y + 0.25
+    z = z + 0.5
+  end
+  stop
+end
+
