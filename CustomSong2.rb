@@ -3,11 +3,11 @@
 
 use_bpm 135
 
-guitar_sample = "C:/Users/Yoshi/Downloads/guitar_samplee.mp3"
-drums_sample = "C:/Users/Yoshi/Downloads/unravel_Drums.mp3"
-guitar_sample2 = "C:/Users/Yoshi/Downloads/guitar_sample2.mp3"
-extra_drums = "C:/Users/Yoshi/Downloads/extra_Drums.mp3"
-out_sample = "C:/Users/Yoshi/Downloads/out_sample.mp3"
+guitar_sample = "C:/Users/jocelyn_vazquez/Downloads/guitar_samplee.mp3"
+drums_sample = "C:/Users/jocelyn_vazquez/Downloads/unravel_Drums.mp3"
+guitar_sample2 = "C:/Users/jocelyn_vazquez/Downloads/guitar_sample2.mp3"
+extra_drums = "C:/Users/jocelyn_vazquez/Downloads/extra_Drums.mp3"
+out_sample = "C:/Users/jocelyn_vazquez/Downloads/out_sample.mp3"
 
 define :rightNotes_m2 do
   play :A3, amp: 0.5
